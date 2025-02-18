@@ -136,7 +136,7 @@ impl KZGSettings<FsFr, FsG1, FsG2, FsFFTSettings, FsPoly, FsFp, FsG1Affine> for 
         let mut out = FsG1::default();
         g1_linear_combination(
             &mut out,
-            &self.g1_values_lagrange_brp,
+            &self.g1_values_monomial,
             &poly.coeffs,
             poly.coeffs.len(),
             self.get_precomputation(),
